@@ -2,23 +2,94 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>تسجيل الدخول - مدرسة النجاة</title>
-  <link rel="stylesheet" href="style.css">
+  <title>تسجيل الدخول - مدارس النجاة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #003366);
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      width: 300px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background-color: gold;
+      color: #001f3f;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ffd700;
+    }
+  </style>
 </head>
 <body>
-  <div class="login-container fade-in">
+  <div class="login-box">
     <h2>تسجيل الدخول</h2>
-    <p>أدخل بريدك الإلكتروني وكلمة المرور للوصول إلى صفحتك</p>
     <input type="email" id="email" placeholder="البريد الإلكتروني">
     <input type="password" id="password" placeholder="كلمة المرور">
     <button onclick="login()">دخول</button>
-    <p id="error-message" class="error"></p>
   </div>
 
-  <footer class="fade-in">
-    <p>© 2025 مدرسة النجاة - جميع الحقوق محفوظة</p>
-  </footer>
+  <script>
+    function login() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-  <script src="script.js"></script>
+      if (!email || !password) {
+        alert("من فضلك أدخل البريد وكلمة المرور");
+        return;
+      }
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxF18ZNBw5M4-Ca3TW99qRa1VhFr8M_nvAkrYgJGEQ/exec";
+
+      fetch(`${scriptURL}?email=${email}&password=${password}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.error) {
+            alert("بيانات غير صحيحة");
+          } else {
+            localStorage.setItem("userName", data.name);
+            localStorage.setItem("userRole", data.role);
+            localStorage.setItem("userGrade", data.grade);
+            localStorage.setItem("userSection", data.section);
+            localStorage.setItem("userSubject", data.subject);
+            window.location.href = `${data.role}.html`;
+          }
+        })
+        .catch(err => {
+          console.error("حدث خطأ:", err);
+          alert("حدث خطأ أثناء الاتصال بالخادم");
+        });
+    }
+  </script>
 </body>
 </html>
