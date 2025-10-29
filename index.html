@@ -2,29 +2,100 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>مدرسة النجاة</title>
-  <link rel="stylesheet" href="style.css">
+  <title>مدارس النجاة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #003366);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      text-align: right;
+    }
+    header a {
+      background-color: gold;
+      color: #001f3f;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    header a:hover {
+      background-color: #ffd700;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .school-logo {
+      width: 150px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+    .features {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 700px;
+    }
+    .feature-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
-  <header class="fade-in">
-    <h1>مدرسة النجاة</h1>
-    <p>الثانويه-بنين-السالميه</p>
+  <header>
+    <a href="login.html">تسجيل الدخول</a>
   </header>
 
-  <main>
-    <section class="slide-up">
-      <h2>عن المنصه</h2>
-      <p>منصه النجاة تقدم بيئة تعليمية متطورة وتواصل إلكتروني فعال بين جميع أفراد المنظومة التعليمية.</p>
-    </section>
+  <div class="container">
+    <img src="https://alnajat.edu.kw/wp-content/uploads/2022/09/logo.png" alt="شعار مدارس النجاة" class="school-logo">
+    <h1>مدارس النجاة – بوابتك للتميز</h1>
+    <p>
+      تأسست مدارس النجاة في الكويت لتكون منارة تعليمية تجمع بين الأصالة والحداثة، وتقدّم بيئة تعليمية متكاملة تهدف إلى بناء جيل واعٍ، مبدع، ومتميز.
+      نحن نؤمن بأن التعليم هو أساس النهضة، ونحرص على تقديم أفضل المناهج، وأحدث الوسائل، وأكفأ الكوادر التعليمية.
+    </p>
 
-    <section class="slide-up delay">
-      <h2>سجل دخولك</h2>
-      <a href="login.html" class="login-button">تسجيل الدخول</a>
-    </section>
-  </main>
-
-  <footer class="fade-in">
-    <p>© 2025 مدرسة النجاة - جميع الحقوق محفوظة</p>
-  </footer>
+    <div class="features">
+      <div class="feature-box">
+        <h3>📚 مناهج متطورة</h3>
+        <p>نقدّم مناهج تعليمية حديثة تواكب التطورات العالمية وتراعي احتياجات الطلاب.</p>
+      </div>
+      <div class="feature-box">
+        <h3>👨‍🏫 كادر تعليمي متميز</h3>
+        <p>نخبة من المعلمين المؤهلين تربويًا وأكاديميًا لضمان جودة التعليم.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🏫 بيئة آمنة ومحفزة</h3>
+        <p>نوفر بيئة مدرسية آمنة، نظيفة، ومحفزة على التعلم والإبداع.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🎓 دعم أكاديمي مستمر</h3>
+        <p>برامج تقوية، متابعة فردية، وتواصل دائم مع أولياء الأمور.</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
