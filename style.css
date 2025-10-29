@@ -1,0 +1,272 @@
+/* الألوان الأساسية */
+:root {
+  --primary-blue: #006699;
+  --primary-green: #009966;
+  --light-bg: #e0f7e9;
+  --light-blue: #d0eaff;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  background: linear-gradient(to bottom right, var(--light-bg), var(--light-blue));
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  background-color: #f0fff0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-button {
+  display: inline-block;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #00cc99;
+}
+
+footer {
+  background-color: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 1.5s ease-out;
+}
+
+.slide-up.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: #ffffffdd;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #00cc99;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+/* ألوان المدرسة */
+:root {
+  --primary-blue: #006699;
+  --primary-green: #009966;
+  --light-bg: #e0f7e9;
+  --light-blue: #d0eaff;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: linear-gradient(to bottom right, var(--light-bg), var(--light-blue));
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+main {
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffffdd;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #00cc99;
+}
+
+ul#student-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul#student-list li {
+  background-color: #f0fff0;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border-right: 5px solid var(--primary-green);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease-out;
+}
+
+.slide-up.delay {
+  animation-delay: 0.5s;
+}
+
+.slide-up.delay2 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+#homework-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#homework-list li {
+  background-color: #f9fff9;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 5px solid var(--primary-green);
+  border-radius: 5px;
+}
+form select,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#homework-list li {
+  background-color: #f9fff9;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 5px solid var(--primary-green);
+  border-radius: 5px;
+}
